@@ -1,15 +1,15 @@
 ﻿Console.WriteLine("Введите число: ");
 int number = int.Parse(Console.ReadLine());
 
-int getDigit(int num)
+int getDigitSum(int num)
 {
-    if (num == 0) return 1;
-    int count = 0;
-    for (int i = 0; num != 0; i++)
+    int Sum = 0;
+    for (int i = 0; num > 0; i++)
         {
+            int lastDigit = num%10;
+            Sum+=lastDigit ; 
             num = num/10;
-            count+=1; 
         }
-        return count;    
+    return Sum;    
 }
-Console.WriteLine(getDigit(number));
+Console.WriteLine(getDigitSum(number));
