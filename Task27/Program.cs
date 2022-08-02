@@ -7,7 +7,7 @@ int getDigitSum(int num)
     for (int i = 0; num > 0; i++)
         {
             int lastDigit = num%10;
-            Sum+=lastDigit ; 
+            Sum+=lastDigit; 
             num = num/10;
         }
     return Sum;    
